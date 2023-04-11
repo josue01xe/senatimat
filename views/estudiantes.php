@@ -116,6 +116,9 @@
 <!--jquery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
+<!--sweetAlert2-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
   $(document).ready(function(){
 
@@ -145,8 +148,23 @@ function obtenerEscuelas(){
 }
 
 function registrarEstudiante(){
-
+Swal.fire({
+  icon: 'question',
+  title: 'Matriculas',
+  text: '¿Esta seguro de registrar al estudiante?',
+  footer:'Desarrollado con PHP',
+  confirmButtonText: 'Aceptar',
+  confirmButtonColor: '#3498DB',
+  showCancelButton: true,
+  cancelButtonText: 'Cancelar',
+  }).then((result) => {
+    //identificando accion del usuario
+    if(result.isConfirmed){
+       console.log("Guardado datos...");
+    }
+  });
 }
+
 $("guardar-estudiante").click(registrarEstudiante);
 //Al cambiar una escuela, se actualizara las carreras
 $("#escuela").change(function (){

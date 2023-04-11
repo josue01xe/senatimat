@@ -20,7 +20,5 @@ return $consulta->fetchAll(PDO::FETCH_ASSOC);
       die($e->getMessage());
     }
   }
-
-  
-  
+ 
 }

@@ -5,7 +5,7 @@ class Conexion{
   //Atributos
   private $host = "localhost";  //Servidor
   private $port = "3306";       //Puerto de comunicacion BD
-  private $database = "senati"; //Nombre BD
+  private $database = "senatimat"; //Nombre BD
   private $charset = "UTF8";    //Codificacion (idioma)
   private $user = "root";       //Usuario(raíz)
   private $password = "";       //Contraseña
